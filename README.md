@@ -5,6 +5,7 @@ part of the Google IT Automation with Python Professional Certificate
 
 There's a separate folder for each course.
 
+---
 ### Course 3/Week 4
 This folder contains validations.py script that validate the username for these criteria:
 * must be a string
