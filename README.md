@@ -17,3 +17,4 @@ Use this command to execute the script
 ```
 python3 validations.py
 ```
+----
