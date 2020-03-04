@@ -12,6 +12,7 @@ def validate_user(username, minlen):
     # Usernames can't be shorter than minlen
     if len(username) < minlen:
         return False
+    # detect first character rules
     if username[0].isnumeric() or username[0] == "." or username[0] == "_":
         return False
     # Usernames can only use letters, numbers, dots and underscores
