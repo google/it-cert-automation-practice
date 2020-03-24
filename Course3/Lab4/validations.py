@@ -27,3 +27,4 @@ print(validate_user("_tico.moreno", 6))  # False
 print(validate_user(".pepe.gonza", 5))  # False
 print(validate_user("valid.user", 4))  # True
 print(validate_user("too_short", 10))  # False
+print(validate_user("J.doe", 4))  # True
