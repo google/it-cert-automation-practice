@@ -20,9 +20,14 @@ def validate_user(username, minlen):
         return False
     return True
 
-
 print(validate_user("blue.kale", 3)) # True
 print(validate_user(".blue.kale", 3)) # Currently True, should be False
 print(validate_user("red_quinoa", 4)) # True
 print(validate_user("_red_quinoa", 4)) # Currently True, should be False
+
+name = input("Your name(4 characters at least):")
+if validate_user(name, 4):
+    print("Name is valid")
+else:
+    print("Name is invalid")
 
