@@ -20,7 +20,7 @@ def validate_user(username, minlen):
         return False
     return True
 
-    # Usernames can only begin with letters
+    # Usernames can only start with letters
     letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
     if username[0] in letters:
         return True
