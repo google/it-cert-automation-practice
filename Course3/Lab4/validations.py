@@ -21,6 +21,5 @@ def validate_user(username, minlen):
     # Usernames can't begin with special character
     if not username[0].isalpha():
         return False
-
     return True
 
