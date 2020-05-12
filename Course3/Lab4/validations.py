@@ -21,6 +21,9 @@ def validate_user(username, minlen):
     # Usernames can't begin with a special charater
     if username[0].isalnum():
         return False
+    # Usernames can't begin with a space
+    if username[0].isspace():
+        return False
     return True
 
 print(validate_user("blue.kale", 3)) # True
