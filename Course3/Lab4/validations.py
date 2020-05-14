@@ -8,7 +8,7 @@ def validate_user(username, minlen):
         raise TypeError("username must be a string")
     if minlen < 1:
         raise ValueError("minlen must be at least 1")
-    
+
     # Usernames can't be shorter than minlen
     if len(username) < minlen:
         return False
@@ -17,6 +17,9 @@ def validate_user(username, minlen):
         return False
     # Usernames can't begin with a number
     if username[0].isnumeric():
+        return False
+    # Username should only start with an alphabet
+    if not username[0].isalpha():
         return False
     return True
 
