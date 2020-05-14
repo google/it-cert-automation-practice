@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python3
 
 import re
@@ -19,6 +20,7 @@ def validate_user(username, minlen):
     if username[0].isnumeric():
         return False
     return True
-
+    print(validate_user("blue.kale",3))# TRue
+    print(validate_user(".blue.kale" , 3)) #currently true, should be false
 
 
