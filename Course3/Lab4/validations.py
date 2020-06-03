@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-
+print(validate_Aditiyadav987("blue.kale", 3)) # True
+print(validate_Aditiyadav987(".blue.kale", 3)) # Currently True, should be False
+print(validate_Aditiyadav987("red_quinoa", 4)) # True
+print(validate_Aditiyadav987("_red_quinoa", 4)) # Currently True, should be False
 import re
 
 def validate_user(username, minlen):
