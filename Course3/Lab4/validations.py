@@ -20,7 +20,10 @@ def validate_user(username, minlen):
         return False
     return True
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 071e9a756ac24163f0610255106d45dfad6331c3
 print(validate_user("blue.kale", 3)) # True
 print(validate_user(".blue.kale", 3)) # Currently True, should be False
 print(validate_user("red_quinoa", 4)) # True
