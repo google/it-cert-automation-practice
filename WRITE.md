@@ -1,1 +1,1 @@
-riyanrisky129@gmail.com
+riyanrisky129@gmail.com|riyanris.my.id
