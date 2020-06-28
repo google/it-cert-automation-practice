@@ -21,6 +21,7 @@ def validate_user(username, minlen):
     if username[0].isalpha():
         return True
     else:
+
         return False
 print(validate_user("blue.kale", 3))
 print(validate_user(".blue.kale",3))
