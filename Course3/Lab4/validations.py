@@ -4,6 +4,9 @@ import re
 
 def validate_user(username, minlen):
     """Checks if the received username matches the required conditions."""
+    if re.match('^[a-z][a-z0-9._]*$',username[0]):
+        return True
+    return False
     if type(username) != str:
         raise TypeError("username must be a string")
     if minlen < 1:
@@ -17,9 +20,6 @@ def validate_user(username, minlen):
         return False
     # Usernames can't begin with a number
     if username[0].isnumeric():
-        return False
-    # Username cannot start with symbol
-    if not username[0].isalpha():
         return False
     return True
 print(validate_user("blue.kale", 3)) # True
