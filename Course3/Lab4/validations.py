@@ -13,19 +13,16 @@ def validate_user(username, minlen):
     if len(username) < minlen:
             flag= False
             print('The given username has length smaller than the minlen')
-    if not username.isalnum():
+    if not  username.isalnum():
             flag= False
-            print("Usernames can't begin with a number")
+            print("Username contains Symbols")
         # Usernames can't begin with a number
     if username [0].isnumeric():
-            print("The Username contians symbols")
+            print("Username begins with a number")
             flag= False
     return flag
-if __name__=='__main__':
-    username=input('Enter the Username: ')
-    minlen=int(input('Enter the minimum length of the Username: '))
-    if validate_user(username,minlen): 
-         print('Ooo hooo the username is Accepted')
-    else:
-         pass    
-    
+if __name__=='__main__':  
+    print(validate_user("blue.kale", 3)) # True
+    print(validate_user(".blue.kale", 3)) # Currently True, should be False
+    print(validate_user("red_quinoa", 4)) # True
+    print(validate_user("_red_quinoa", 4)) # Currently True, should be False    
