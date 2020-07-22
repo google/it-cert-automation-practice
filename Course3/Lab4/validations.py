@@ -15,7 +15,7 @@ def validate_user(username, minlen):
     if not re.match('^[a-z0-9._]*$', username):
   
         return False
-    # Usernames cant start with a special symbol
+    # Usernames can't start with a special symbol
     if (username[0]=='.' or  username[0]=='_'):
         return False 
     # Usernames can't begin with a number
