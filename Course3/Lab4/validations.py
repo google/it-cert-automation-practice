@@ -8,8 +8,10 @@ def validate_user(username, minlen):
         raise TypeError("username must be a string")
     if minlen < 1:
         raise ValueError("minlen must be at least 1")
-    #username can't begin with '_'or' .'
-    if username[0] == "_" or username[0] == "." :
+    #username can't begin with '_'or'.'
+    if username[0] == "_":
+        return False
+    if username[0] == ".":
         return False
     # Usernames can't be shorter than minlen
     if len(username) < minlen:
