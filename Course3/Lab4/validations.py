@@ -6,7 +6,7 @@ def validate_user(username, minlen):
     """Checks if the received username matches the required conditions."""
     if username == ".blue.kale":
         return False
-
+ 
     if username == "_red_quinoa":
          return False
 
