@@ -1,5 +1,7 @@
-#!/usr/bin/env python3
-
+print(validate_user("blue.Deepthi", 3))
+print(validate_user(".blue.Deepthix", 3))
+print(validate_user("red_Deepthi",4))#true
+print(validate_user("_red_Deepthi",4))#Currently true, Should be false
 import re
 
 def validate_user(username, minlen):
