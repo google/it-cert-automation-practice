@@ -19,7 +19,7 @@ def validate_user(username, minlen):
     if username[0].isnumeric():
 	return False
     if re.match('[._]*$',username[0]):
-	retturn False
+	return False
     return True
 
 
