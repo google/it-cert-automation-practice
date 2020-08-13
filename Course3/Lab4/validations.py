@@ -19,7 +19,7 @@ def validate_user(username, minlen):
     if username[0].isnumeric():
         return False
     if not username[0].isalpha():
-        return False
+        retur False
     return True
 
 print(validate_user("blue.kale", 3)) # True
