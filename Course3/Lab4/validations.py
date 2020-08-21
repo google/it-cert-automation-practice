@@ -19,6 +19,14 @@ def validate_user(username, minlen):
     if username[0].isnumeric():
         return False
     return True
+    # first character doesn't start with either of the forbidden characters
+    regex = re.compile('[@_!#$%^&*()<>?/\|}{~:]')
+    if(regex.search(string) == None): 
+        return True
+    else:
+        return False
 
-
-
+print(validate_user("blue.kale", 3)) # True
+print(validate_user(".blue.kale", 3)) # Currently True, should be False
+print(validate_user("red_quinoa", 4)) # True
+print(validate_user("_red_quinoa", 4)) # Currently True, should be False
