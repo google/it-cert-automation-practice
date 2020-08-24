@@ -1,3 +1,5 @@
+
+
 #!/usr/bin/env python3
 
 import re
@@ -21,4 +23,7 @@ def validate_user(username, minlen):
     return True
 
 
-
+print(validate_user("blue.kale",3)) #true
+print(validate_user(".blue.kale",3)) # currently True ,should be false
+print(validate_user("red_qunioa",4)) #true
+print(validate_user("_red_qunioa",4)) #currently  ture , should be false
