@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python3
  
 import re
@@ -19,6 +20,12 @@ def validate_user(username, minlen):
     if username[0].isnumeric():
         return False
     return True
+    if re.match('\.', username[0]):
+        return False
+    if re.match('\_', username[0]):
+        return False
+
+
 print(validate_user("blue.kale", 3)) # True
 print(validate_user(".blue.kale", 3)) # Currently True, should be False
 print(validate_user("red_quinoa", 4)) # True
