@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-#!/home/acruz/anaconda3/bin/python
 import re
 
 
