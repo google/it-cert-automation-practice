@@ -9,6 +9,7 @@ def validate_user(username, minlen):
     if username == "_red_quinoa":
        return False 
 
+#Changed
 
     if type(username) != str:
         raise TypeError("username must be a string")
