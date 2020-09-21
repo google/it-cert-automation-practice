@@ -2,7 +2,6 @@
 
 import re
 
-
 def validate_user(username, minlen):
     """Checks if the received username matches the required conditions."""
     if type(username) != str:
@@ -19,9 +18,3 @@ def validate_user(username, minlen):
     username[0].isnumeric()):  # changes in Regex and remove the repetition of code
         return False
     return True
-
-print(validate_user("a", 1)) # should be True
-print(validate_user("abc", 1)) # should be True
-print(validate_user(".a", 1)) # currently True but should be False
-print(validate_user("1", 1)) # currently True but should be False
-print(validate_user("_a1ca", 1)) # currently True but should be False
