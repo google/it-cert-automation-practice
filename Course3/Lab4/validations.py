@@ -13,8 +13,8 @@ def validate_user(username, minlen):
     Username should not be shorter than minlen
     Username should always starts with letter and should consists of letters, numbers, dots and underscore
     """
-    if (len(username) < minlen) or 
-        retrun False
+    if (len(username) < minlen):
+        return False
     if not re.match(r'^[a-z][a-z0-9._]*$', username):  # made changes in Regex 
         return False
     return True
