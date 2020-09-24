@@ -22,13 +22,10 @@ def validate_user(username, minlen):
 
 
 
-<<<<<<< HEAD
-print(validate_user('username',minlen=5))
-=======
 
 print(validate_user("blue.kale", 3)) # True
 print(validate_user(".blue.kale", 3)) # Currently True, should be False
 print(validate_user("red_quinoa", 4)) # True
 print(validate_user("_red_quinoa", 4)) # Currently True, should be False
 
->>>>>>> 1c153be6772cba254ea46adfce83a5050e036770
+
