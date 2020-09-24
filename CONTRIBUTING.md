@@ -1,1 +1,1 @@
-hello i request you all to contribute to this repo
+I request you all to contribute to this repository
