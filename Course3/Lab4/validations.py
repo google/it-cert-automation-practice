@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-/* DM Test Script */
+
+#DM Test Script
 
 import re
 
