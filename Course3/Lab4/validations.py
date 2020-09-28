@@ -21,3 +21,4 @@ def validate_user(username, minlen):
         return False
     return True
 
+# removed the following lines which I believe were part of test
