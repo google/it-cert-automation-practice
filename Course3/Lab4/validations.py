@@ -1,7 +1,7 @@
-#!/usr/bin/env python3
+#@@ -1,24 +1,27 @@
+#!/usr/bin/env python3ç
 
 import re
-
 def validate_user(username, minlen):
     """Checks if the received username matches the required conditions."""
     if type(username) != str:
@@ -9,7 +9,7 @@ def validate_user(username, minlen):
     if minlen < 1:
         raise ValueError("minlen must be at least 1")
     
-    # Usernames can't be shorter than minlen
+     # Usernames can't be shorter than minlen
     if len(username) < minlen:
         return False
     # Usernames can only use letters, numbers, dots and underscores
@@ -17,12 +17,14 @@ def validate_user(username, minlen):
         return False
     # Usernames can't begin with a number
     if username[0].isnumeric():
-        return False
+    	if not username[0].isalpha():
+        	return False
     return True
+    
 
 print(validate_user("blue.kale", 3)) # True
-print(validate_user("3.blue.kale", 3)) # Currently True, should be False
+print(validate_user("1.blue.kale", 3)) # Currently True, should be False
 print(validate_user("red_quinoa", 4)) # True
-print(validate_user("3_red_quinoa", 4)) # Currently True, should be False
+print(validate_user("2_red_quinoa", 4)) # Currently True, should be False
 
 
