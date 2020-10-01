@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""A simple Hello World type app which can serve on port 8000.
+"""Here you can write a simple Hello World type app which can serve on port 8000.
 Optionally, a different port can be passed.
 
 The code was inspired by:
