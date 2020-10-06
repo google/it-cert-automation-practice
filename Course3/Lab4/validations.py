@@ -4,7 +4,6 @@ import re
 
 def validate_user(username, minlen):
     """Checks if the received username matches the required conditions."""
-    string_check= re.compile('[@_!#$%^&*()<>?/\|}{~:.]')
     if type(username) != str:
         raise TypeError("username must be a string")
     if minlen < 1:
