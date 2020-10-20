@@ -15,6 +15,7 @@ def validate_user(username, minlen):
     # Usernames can only use letters, numbers, dots and underscores
     if not re.match('^[a-z0-9._]*$', username):
         return False
+    #Check if first letter of username is correct
     if username[0].isalpha():
         return True
     else:
