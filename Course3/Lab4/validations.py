@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+'''this is sad'''
 import re
 
 def validate_user(username, minlen):
@@ -19,7 +19,6 @@ def validate_user(username, minlen):
     if username[0].isalpha():
         return True
     return False
-
 
 
 print(validate_user("blue.kale", 3)) # True
