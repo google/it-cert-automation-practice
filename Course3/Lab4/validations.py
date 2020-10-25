@@ -19,11 +19,11 @@ def validate_user(username, minlen):
         return False
     return True
     # Usernamse can't begin with underscores or dots
-    if re.match('^[^\.]', username[0]):
-       return False
+    if not username[0].isalpha():
+        return False
     return True
 
 print(validate_user("blue.kale", 3)) # True
-print(validate_user("1blue.kale", 3)) # Currently True, should be False
+print(validate_user(".blue.kale", 3)) # Currently True, should be False
 print(validate_user("red_quinoa", 4)) # True
-print(validate_user("1red.quinoa", 4)) # Currently True, should be False
+print(validate_user("_red.quinoa", 4)) # Currently True, should be False
