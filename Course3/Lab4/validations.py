@@ -4,6 +4,8 @@ import re
 
 def validate_user(username, minlen):
     """Checks if the received username matches the required conditions."""
+    if username[0]== ('!' or  '@' or  '#' or '$' or '%' or '^' or '&' or '*' ):
+        raise TypeError("username must not start with a special character")
     if type(username) != str:
         raise TypeError("username must be a string")
     if minlen < 1:
@@ -18,7 +20,13 @@ def validate_user(username, minlen):
     # Usernames can't begin with a number
     if username[0].isnumeric():
         return False
+    for i in username[0] :
+        if  ((ord(i) >= 32 and ord(i) < 48)or(ord(i) >= 91 and ord(i) < 97)or (ord(i) >= 123 and ord(i) < 127) or (ord(i) >= 58 and ord(i) < 65) ):
+            return False
     return True
-
+print(validate_user("blue.kale", 3)) # True
+print(validate_user(".blue.kale", 3)) # Currently True, should be False
+print(validate_user("red_quinoa", 4)) # True
+print(validate_user("_red_quinoa", 4)) # Currently True, should be False
 
 
