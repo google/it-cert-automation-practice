@@ -21,6 +21,7 @@ def validate_user(username, minlen):
     if re.match('[._]', username[0]):
         return False
     return True
+    #changes
 
 print(validate_user("blue.kale", 3)) # True
 print(validate_user(".blue.kale", 3)) # Currently True, should be False
