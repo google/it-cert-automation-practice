@@ -26,7 +26,7 @@ import socketserver
 import sys
 
 # TCP port for listening to connections, if no port is received
-DEFAULT_PORT=8000
+DEFAULT_PORT=3000
 
 class Handler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
