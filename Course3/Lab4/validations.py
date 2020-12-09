@@ -19,7 +19,7 @@ def validate_user(username, minlen):
     if username[0].isnumeric():
         return False
     # Usernames should begin with a letters
-    if not username[0].isalpha():
+    if not re.match('^[a-z][a-z0-9._]*$',username):
         return False
     return True
 
