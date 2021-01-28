@@ -20,10 +20,10 @@ def validate_user(username, minlen):
         return False
     return True
 
-     # Usernames can't begin with a dot
-     if (username[0] == "."):
-		return False
-	return True
+     # Usernames can't begin with a dot or underscore
+     if username[0] == "." or username[0] == "_":
+        return False
+    return True
 
 print(validate_user("blue.kale", 3)) # True
 print(validate_user(".blue.kale", 3)) # Currently True, should be False
