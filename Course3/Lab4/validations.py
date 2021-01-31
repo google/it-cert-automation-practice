@@ -20,7 +20,7 @@ def validate_user(username, minlen):
         return False
     if username.startswith("."):
         return False
-    if username.startswith("_"):
+    if username.startswith('_'):
         return False
     return True
 print(validate_user("blue.kale", 3)) # True
