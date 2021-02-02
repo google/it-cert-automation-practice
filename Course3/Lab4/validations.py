@@ -18,7 +18,7 @@ def validate_user(username, minlen):
 
     ## Adding Pushkar Code
     if username[0] in ['.','_']:
-        return False
+        return False 
     # Usernames can't begin with a number
     if username[0].isnumeric():
         return False
