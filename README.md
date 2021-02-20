@@ -5,3 +5,5 @@ part of the Google IT Automation with Python Professional Certificate
 
 There's a separate folder for each course.
 
+Fixed bug on Course3/Lab4/validations.py which on validation_user function has bug eliminating
+symbols on first letter username.
