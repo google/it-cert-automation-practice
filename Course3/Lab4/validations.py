@@ -8,6 +8,7 @@ def validate_user(username, minlen):
         raise TypeError("username must be a string")
     if minlen < 1:
         raise ValueError("minlen must be at least 1")
+    # Usernames can only use first character
     if not re.match('[a-zA-Z]', username[0]):
         return False
     # Usernames can't be shorter than minlen
