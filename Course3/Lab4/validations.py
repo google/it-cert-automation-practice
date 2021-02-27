@@ -18,8 +18,8 @@ def validate_user(username, minlen):
     # Usernames can't begin with a number
     if username[0].isnumeric() or username[0]==string.punctuation:
         return False
-    
-
+    return True
+#adding more
 
 
 print(validate_user("blue.kale", 3)) # True
