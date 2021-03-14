@@ -8,6 +8,8 @@ def validate_user(username, minlen):
         raise TypeError("username must be a string")
     if minlen < 1:
         raise ValueError("minlen must be at least 1")
+
+    # The first character must be a letter
     if not username[0].isalpha():
         return False
     
