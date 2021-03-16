@@ -17,6 +17,7 @@ def validate_user(username, minlen):
         return False
     # Usernames can't begin with a number
     if username[0].isalpha() == False:
+        # changed
         return False
     return True
 
