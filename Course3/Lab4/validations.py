@@ -20,8 +20,7 @@ def validate_user(username, minlen):
         return False
     return True
 
-print(validate_user(".blue.kale", 3))
-print(validate_user("_red_quinoa", 4))
+
 
 
 
