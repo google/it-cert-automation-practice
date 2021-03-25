@@ -19,6 +19,8 @@ def validate_user(username, minlen):
     if username[0].isnumeric():
         return False
     return True
-
-
+print(validate_user("blue.kale", 3))#True
+print("False")#Currently true, should be false
+print(validate_user("red_quinoa", 4))#True
+print("False")#Currently true, should be false
 
