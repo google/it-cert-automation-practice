@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python3
 
 import re
@@ -11,6 +12,10 @@ def validate_user(username, minlen):
     # Username can only begin with a letter
     if not username[0].isalpha():
         return False 
+
+    #This thing don't want to work at all.
+
+
     # Usernames can't be shorter than minlen
     if len(username) < minlen:
         return False
