@@ -19,7 +19,7 @@ def validate_user(username, minlen):
     if username[0].isnumeric():
         return False
     #Usernames can't begin with special characters/punctuations
-    not_valid = [".", "_", "?", "-", ",", ":", ";", "!", "$"]
+    not_valid = ["'", ".", "_", "?", "-", ",", ":", ";", "!", "$"]
     if username[0] in not_valid:
         return False
     return True
