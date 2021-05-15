@@ -21,7 +21,9 @@ def validate_user(username, minlen):
 #        return False
 #    return True
 
-    # Usernames must begin with a letter
+    # Usernames must begin with a letter - replace above function with this check
+    # The return status's are now reversed
+
     if username[0].isalpha():
         return True
     return False
