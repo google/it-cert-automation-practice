@@ -12,7 +12,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
+# Thank you for nice tutorials
 """A simple Hello World type app which can serve on port 8000.
 Optionally, a different port can be passed.
 
