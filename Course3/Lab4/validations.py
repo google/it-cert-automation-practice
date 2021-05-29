@@ -21,7 +21,6 @@ def validate_user(username, minlen):
     # Usernames can only begin with a letter
     if username[0].isalpha() == False:
         return  False
-
     return True
 
 print(validate_user("blue.kale", 3)) # True
