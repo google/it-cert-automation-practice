@@ -24,7 +24,7 @@ def validate_user(username, minlen):
     # Username can't begin with an underscore
     if username[0] == '_':
         return False
-    # If all cases are passed...
+    # If all cases are passed....
     return True
 
 
