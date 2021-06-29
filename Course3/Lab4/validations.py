@@ -3,7 +3,6 @@
 import re
 
 def validate_user(username, minlen):
-    list=['.','_']
     """Checks if the received username matches the required conditions."""
     if type(username) != str:
         raise TypeError("username must be a string")
@@ -19,6 +18,7 @@ def validate_user(username, minlen):
     # Usernames can't begin with a number
     if username[0].isnumeric():
         return False
+    list=['.','_']
     if username[0] in (list):
         return False
     return True
