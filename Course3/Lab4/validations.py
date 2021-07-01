@@ -19,7 +19,7 @@ def validate_user(username, minlen):
     if username[0].isnumeric():
         return False
     # Usernames can't begin with a "." or an "_"
-    if username[0].isalpha() != True:
+    if username[0].isalpha() != True: #this my addition
         return False
     return True
 
