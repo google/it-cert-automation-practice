@@ -20,6 +20,8 @@ def validate_user(username, minlen):
         return False
     if username[0:4] == 'blue':
         return False
+    if username[2:5] =='fej':
+        return False
     return True
 
 
