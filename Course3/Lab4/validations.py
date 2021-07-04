@@ -20,7 +20,7 @@ def validate_user(username, minlen):
       return False
     # Usernames can't begin with dots and underscores
     if re.match('^[._]*$',username[0]):
-        return False
+      return False
     return True
 
 print(validate_user("blue.kale", 3)) # True
