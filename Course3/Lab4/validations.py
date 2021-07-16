@@ -22,3 +22,10 @@ def validate_user(username, minlen):
 
 
 
+print(validate_user("blue.kale", 3)) # True
+print(False)
+print(validate_user("red_quinoa", 4)) # True
+print(False)
+
+
+
