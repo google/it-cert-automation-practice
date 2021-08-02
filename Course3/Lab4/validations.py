@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+#:) bad email
 import re
 
 def validate_user(username, minlen):
