@@ -9,7 +9,7 @@ def validate_user(username, minlen):
     if minlen < 1:
         raise ValueError("minlen must be at least 1")
     
-    # Usernames can only use letters, numbers, dots and underscores
+    # Username must start with a letter
     if not username[0].isalpha():
         return False
 
