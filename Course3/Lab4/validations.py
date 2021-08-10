@@ -16,11 +16,10 @@ def validate_user(username, minlen):
     if not re.match('^[a-z0-9._]*$', username):
         return False
     # Usernames can't begin with a number
-#    if username[0].isnumeric():
-#        return False
-#    return True
+    if username[0].isnumeric():
+        return False
 
-    if username[0].startswith('_') or  username[0].startswith('.') or username[0].isnumeric():
+    if username[0].startswith('_') or  username[0].startswith('.'):
         return False
     return True
 
