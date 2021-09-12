@@ -12,6 +12,7 @@ def validate_user(username, minlen):
     # Usernames can't be shorter than minlen
     if len(username) < minlen:
         return False
+    #Fixed part
     # Usernames can only use letters, numbers, dots and underscores
     if re.match('^[._]+[a-zA-Z._]*', username):
         return False
