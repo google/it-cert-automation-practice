@@ -1,2 +1,3 @@
 bonjour je me nomme carlin tchuisseu
-j ajoute une deuxieme ligne au fichier  
+j ajoute une deuxieme ligne au fichier
+je le modifie   
