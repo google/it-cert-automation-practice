@@ -21,6 +21,7 @@ def validate_user(username, minlen):
     # Usernames can't start with special characters
     if not re.match('^[a-zA-Z]*$', username[0]):
         return False
+
     return True
 
 
