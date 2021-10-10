@@ -18,7 +18,12 @@ def validate_user(username, minlen):
     # Usernames can't begin with a number
     if username[0].isnumeric():
         return False
+    if not username[0].isalpha():
+        return False 
     return True
 
-
+print(validate_user("blue.kale", 3)) # True
+print(validate_user(".blue.kale", 3)) # Curretly True, sould be False
+print(validate_user("red.quinoa", 4)) # True
+print(validate_user("_red.quinoa", 4)) # Curretly True, sould be false
 
