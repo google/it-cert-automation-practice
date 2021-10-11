@@ -20,5 +20,6 @@ def validate_user(username, minlen):
         return False
     return True
 
-
+print('redo commit'
+)
 
