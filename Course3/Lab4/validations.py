@@ -8,10 +8,13 @@ def validate_user(username, minlen):
         raise TypeError("username must be a string")
     if minlen < 1:
         raise ValueError("minlen must be at least 1")
-    
+
     # Usernames can't be shorter than minlen
     if len(username) < minlen:
         return False
+    if username[0] == '_' or username[0] == ".":
+        return False
+    return True
     # Usernames can only use letters, numbers, dots and underscores
     if not re.match('^[a-z0-9._]*$', username):
         return False
@@ -21,4 +24,9 @@ def validate_user(username, minlen):
     return True
 
 
+
+print(validate_user("blue.kale", 3)) #true
+print(validate_user(".blue.kale", 3)) #currently true, should be false
+print(validate_user("red_quinoa", 4)) #true
+print(validate_user("_red_quinoa", 4)) #currently true, should be false
 
