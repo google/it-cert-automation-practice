@@ -1,4 +1,6 @@
 bonjour je me nomme carlin tchuisseu
 j ajoute une deuxieme ligne au fichier
 je le modifie
-j'ajoute une nouvelle ligne    
+j'ajoute une nouvelle ligne
+la master évolue une première fois 
+la master évolue une deuxième fois     
