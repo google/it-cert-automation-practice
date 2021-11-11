@@ -20,5 +20,13 @@ def validate_user(username, minlen):
         return False
     return True
 
+    if not re.match('^[._]*$', username[0]):
+        return False
+    return True
+ 
+print(validate_user("blue.kale", 3)) #True
+print(validate_user(".blue.kale", 3)) #Currently True, should be False
+print(validate_user("red_quinoa", 4)) #True
+print(validate_user("_red_quinoa", 4)) #currently True, should be False
 
 
