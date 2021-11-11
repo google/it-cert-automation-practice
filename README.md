@@ -5,3 +5,4 @@ part of the Google IT Automation with Python Professional Certificate
 
 There's a separate folder for each course.
 
+Add username init with letter validation
