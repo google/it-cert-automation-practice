@@ -2,13 +2,19 @@
 
 import re
 
+#To check if the username already exist or not
+
+username_list=[]
 def validate_user(username, minlen):
     """Checks if the received username matches the required conditions."""
+
+    if username in username_list:
+        raise TypeError("username already exist")
     if type(username) != str:
         raise TypeError("username must be a string")
     if minlen < 1:
         raise ValueError("minlen must be at least 1")
-    
+
     # Usernames can't be shorter than minlen
     if len(username) < minlen:
         return False
@@ -18,7 +24,5 @@ def validate_user(username, minlen):
     # Usernames can't begin with a number
     if username[0].isnumeric():
         return False
+    username_list.append(username)
     return True
-
-
-
