@@ -1,0 +1,16 @@
+name: 'Close stale issues and PRs'
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+permissions:
+  pull-requests: write
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v4
+        with:
+          debug-only: true
+          stale-pr-message: 'Old PRs are automatically closed to keep this repo clean.'
