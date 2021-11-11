@@ -1,0 +1,18 @@
+bonjour je me nomme carlin tchuisseu
+j ajoute une deuxieme ligne au fichier
+je le modifie
+j'ajoute une nouvelle ligne
+la master évolue une première fois 
+la master évolue une deuxième fois     
+je fais évoluer la master
+je fais une nouvelle évolution sur la branche 4    
+j'ajoute une nouvelle ligne
+une autre évolution sur la master    
+nouvelle évolution sur la branche 5    
+évolution depuis new -feature online 
+première évolution de la master en ligne 
+deuxième évolution en ligne de la master
+troisième évolution en ligne de la master
+première évolution de la master en ligne
+première évolution locale de la master  
+première évolution locale de la master
