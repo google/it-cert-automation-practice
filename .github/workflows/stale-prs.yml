@@ -13,4 +13,4 @@ jobs:
     steps:
       - uses: actions/stale@v4
         with:
-          stale-pr-message: 'Old PRs are automatically closed to keep this repo clean.'
+          stale-pr-message: 'Stale PRs will be automatically closed to keep this repo clean. If there is no activity on this PR in the next 7 days, this PR will be closed.'
