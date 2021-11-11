@@ -18,7 +18,14 @@ def validate_user(username, minlen):
     # Usernames can't begin with a number
     if username[0].isnumeric():
         return False
-    return True
+    # Usernames can only begin with a letter
+    if re.match(r"^[a-zA-Z].*", username):
+        return True
+    return False
+print(validate_user("blue.kale", 3))
+print(validate_user(".blue.kale", 3))
+print(validate_user("red_quinoa", 4))
+print(validate_user("_red_quinoa", 4))
 
 
 
