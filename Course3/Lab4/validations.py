@@ -3,12 +3,16 @@
 import re
 
 def validate_user(username, minlen):
+    
+    # Add variable string_check to compile the symbols
+    string_check= re.compile('[@_.!#$%^&*()<>?/\|}{~:]') 
+    
     """Checks if the received username matches the required conditions."""
     if type(username) != str:
         raise TypeError("username must be a string")
     if minlen < 1:
         raise ValueError("minlen must be at least 1")
-    
+
     # Usernames can't be shorter than minlen
     if len(username) < minlen:
         return False
@@ -18,7 +22,13 @@ def validate_user(username, minlen):
     # Usernames can't begin with a number
     if username[0].isnumeric():
         return False
+    # Username can't begin with symbol
+    if(string_check.search(username[0]) != None): 
+        return False
     return True
 
-
+print(validate_user("blue.kale", 3)) # True
+print(validate_user(".blue.kale", 3)) # Currently True, should be False
+print(validate_user("red_quinoa", 4)) # True
+print(validate_user("_red_quinoa", 4)) # Currently True, should be False
 
