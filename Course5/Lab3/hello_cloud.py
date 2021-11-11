@@ -19,10 +19,20 @@ Optionally, a different port can be passed.
 The code was inspired by:
 https://gist.github.com/davidbgk/b10113c3779b8388e96e6d0c44e03a74
 """
+
+#http is a package that collects several modules for working with the HyperText Transfer Protocol:
 import http
+
+#http.server contains basic HTTP server classes based on socketserver
 import http.server
+
+# the socket() function returns a socket object whose methods implement the various socket system calls.
 import socket
+
+#Classes that simplify writing network servers.
 import socketserver
+
+#System-specific parameters and functions
 import sys
 
 # TCP port for listening to connections, if no port is received
