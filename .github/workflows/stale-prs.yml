@@ -13,5 +13,4 @@ jobs:
     steps:
       - uses: actions/stale@v4
         with:
-          debug-only: true
           stale-pr-message: 'Old PRs are automatically closed to keep this repo clean.'
