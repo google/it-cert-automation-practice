@@ -1,7 +1,10 @@
-# Google IT Automation with Python Professional Certificate - Practice files
+Fixed the behaviour of validate_user function in validations.py.
 
-This repository contains the practice files used throughout the courses that are
-part of the Google IT Automation with Python Professional Certificate
+Closes:#1
 
-There's a separate folder for each course.
+Fixes#<issue_number_goes_here>
+
+>It's a good idea to open an issue first for discussion.
+
+-[] Tests pass
 
