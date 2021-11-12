@@ -3,6 +3,8 @@
 import re
 
 def validate_user(username, minlen):
+    if not username[0].isalpha():
+       return False
     """Checks if the received username matches the required conditions."""
     if type(username) != str:
         raise TypeError("username must be a string")
@@ -21,4 +23,9 @@ def validate_user(username, minlen):
     return True
 
 
+
+print(validate_user('blue.kale',3))
+print(validate_user('.blue.kale',3))
+print(validate_user('red_quinoa',4))
+print(validate_user('_red_quinoa',4))
 
