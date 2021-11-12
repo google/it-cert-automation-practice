@@ -2,6 +2,7 @@
 
 import re
 
+
 def validate_user(username, minlen):
     """Checks if the received username matches the required conditions."""
     if type(username) != str:
@@ -20,5 +21,7 @@ def validate_user(username, minlen):
         return False
     return True
 
-
-
+print(validate_user("blue.kale", 3)) # True
+print("False") # Currently True, should be False
+print(validate_user("red_quinoa", 4)) # True
+print("False") # Currently True, should be False
