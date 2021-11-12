@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 import re
-
 def validate_user(username, minlen):
     """Checks if the received username matches the required conditions."""
     if type(username) != str:
@@ -19,6 +18,9 @@ def validate_user(username, minlen):
     if username[0].isnumeric():
         return False
     return True
-
+print(validate_user("blue.kale", 3))
+print(validate_user(".blue.kale", 3))
+print(validate_user("red_quinoa", 4))
+print(validate_user("_red_quinoa", 4))
 
 
