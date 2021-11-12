@@ -9,6 +9,11 @@ def validate_user(username, minlen):
     if minlen < 1:
         raise ValueError("minlen must be at least 1")
     
+<<<<<<< HEAD
+    if not re.search('^[a-z]',username):
+        return False
+=======
+>>>>>>> parent of 7b2ac70... added a if condition to check if the user name starts with alphabets only
     # Usernames can't be shorter than minlen
     if len(username) < minlen:
         return False
