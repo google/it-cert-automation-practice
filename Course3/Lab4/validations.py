@@ -9,7 +9,12 @@ def validate_user(username, minlen):
     if minlen < 1:
         raise ValueError("minlen must be at least 1")
     
-    # Usernames can't be shorter than minlen
+
+    a=ord(username[0])
+    if a<65 or a>122:
+        return False# Usernames can't be shorter than minlen
+    if a>90 and a<97:
+        return False
     if len(username) < minlen:
         return False
     # Usernames can only use letters, numbers, dots and underscores
@@ -19,6 +24,9 @@ def validate_user(username, minlen):
     if username[0].isnumeric():
         return False
     return True
-
+print(validate_user("blue.kale", 3)) # True
+print(validate_user(".blue.kale", 3)) # Currently True, should be False
+print(validate_user("red_quinoa", 4)) # True
+print(validate_user("_red_quinoa", 4)) # Currently True, should be False
 
 
