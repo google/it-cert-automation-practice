@@ -10,7 +10,7 @@ def validate_user(username, minlen):
         raise ValueError("minlen must be at least 1")
     
     # Usernames can't be shorter than minlen
-    if len(username) < minlen:
+    if len(username) <= minlen:
         return False
     # Usernames can only use letters, numbers, dots and underscores
     if not re.match('^[a-z0-9._]*$', username):
@@ -18,7 +18,12 @@ def validate_user(username, minlen):
     # Usernames can't begin with a number
     if username[0].isnumeric():
         return False
+    elif re.match('^[._]',username[0]):
+        return False
     return True
 
-
+print(validate_user("blue.kale",3)) #T
+print(validate_user(".blue.kale",3)) #T, F
+print(validate_user("red_quinoa",4)) #T
+print(validate_user("_red_quinoa",4)) #T, F
 
