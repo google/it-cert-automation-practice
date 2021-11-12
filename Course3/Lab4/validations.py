@@ -21,4 +21,5 @@ def validate_user(username, minlen):
     return True
 
 
+    print(validate_user("blue-kale",3))
 
