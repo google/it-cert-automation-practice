@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+!/usr/bin/env python3
 
 import re
 
@@ -15,10 +15,7 @@ def validate_user(username, minlen):
     # Usernames can only use letters, numbers, dots and underscores
     if not re.match('^[a-z0-9._]*$', username):
         return False
-    # Usernames can't begin with a number
-    if username[0].isnumeric():
+    # Usernames can only begin with a letter
+    if not re.match('[a-z]', username[0]):
         return False
     return True
-
-
-
