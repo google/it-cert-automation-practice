@@ -21,4 +21,11 @@ def validate_user(username, minlen):
     return True
 
 
+<<<<<<< HEAD
+print(validate_user("blue.kale", 3)) # True
+print(validate_user(".blue.kale", 3)) # Correctly return False now
+print(validate_user("red_quinoa", 4)) # True
+print(validate_user("_red_quinoa", 4)) # Correctly return  False now
+=======
+>>>>>>> parent of 53f1162... Closes: #1
 
