@@ -21,8 +21,8 @@ def validate_user(username, minlen):
     return True
     # Usernames can't begin with punctuation marks
 
-    if re.match('^[._]', username[0]):
-        return False
+   # if re.match('^[._]', username[0]):
+    #    return False
     
 
 print(validate_user("blue.kale", 3)) # True
