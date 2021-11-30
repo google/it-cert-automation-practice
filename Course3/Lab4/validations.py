@@ -16,6 +16,7 @@ def validate_user(username, minlen):
     # Usernames can only start with letters and numbers
     if re.match('^[._^*$][a-z0-9._]*$', username):
         return False
+    # will try to commit again
 
     # Usernames can only be letters, numbers, periods, and underscores
     if not re.match('^[a-z0-9._]*$', username):
