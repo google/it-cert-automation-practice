@@ -21,6 +21,7 @@ def validate_user(username, minlen):
     # Can not start with . 
     if username[0] == '.':
         return False
+    # Ca not  start with _		
     if username[0] == '_':
         return False
     return True
