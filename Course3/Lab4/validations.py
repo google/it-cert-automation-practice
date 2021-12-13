@@ -22,7 +22,7 @@ def validate_user(username, minlen):
 
     # Usernames can't begin with a number
 
-    if username[0]!= letter
+    if username[0]!= char
         return False
     return True
 
