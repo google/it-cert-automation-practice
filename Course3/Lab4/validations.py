@@ -23,9 +23,5 @@ def validate_user(username, minlen):
     return True
 
 validate_user("chichi", 4)
-
-def myFunc():
-    print("Yes")
-
-myFunc()
+validate_user(".....", 2)
 
