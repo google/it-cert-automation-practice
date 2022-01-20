@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import re
+from string import ascii_lowercase
 
 def validate_user(username, minlen):
     """Checks if the received username matches the required conditions."""
@@ -18,7 +19,12 @@ def validate_user(username, minlen):
     # Usernames can't begin with a number
     if username[0].isnumeric():
         return False
+    if username[0] not in ascii_lowercase:
+        return False
     return True
 
 
-
+print(validate_user("blue.kale",3)) # true
+print(validate_user(".blue.kale",3))
+print(validate_user("red_quiona",4))
+print(validate_user("_red_quiona",4))
