@@ -1,5 +1,6 @@
-#!/usr/bin/env python3
 
+#!/usr/bin/env python3
+# python program
 import re
 
 def validate_user(username, minlen):
@@ -21,4 +22,7 @@ def validate_user(username, minlen):
     return True
 
 
-
+print(validate_user("blue.kala", 3)) # True
+print(validate_user("ab", 3)) # Currently True, should be False
+print(validate_user("red_quinoa", 4)) # True
+print(validate_user("a", 4)) # Currently True, should be False
