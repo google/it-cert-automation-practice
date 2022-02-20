@@ -1,4 +1,14 @@
-#!/usr/bin/env python3
+#sorry i am C, C++, C# Programmer, i am learning Git Hub for my purpose. 
+#I don't know python aswell. i think its not important to solve the python
+#example here... its just about to use the git tools. thanks for understanding
+#if ((validate_user,1) == a or b or . or r or _ )
+#print ('TRUE')
+#validate_user = 'safir';
+print(validate_user("blue.kale", 1)) # True
+print(validate_user(".blue.kale", 1)) # Currently True, should be False
+print(validate_user("red_quinoa", 1)) # True
+print(validate_user("_red_quinoa", 1)) # Currently True, should be False
+
 
 import re
 
