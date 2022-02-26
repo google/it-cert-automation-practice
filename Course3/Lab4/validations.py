@@ -14,7 +14,6 @@ def validate_user(username, minlen):
     for index ,letter in enumerate(username):
         if letter in string.punctuation and index == 0:
             return False
-        else :
             break
     if len(username) < minlen:
         return False
