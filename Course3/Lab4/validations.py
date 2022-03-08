@@ -21,7 +21,6 @@ def validate_user(username, minlen):
     # Modifying the first letter can't be special characther
     if username[0] == '.' or username[0] == '_':
       return False
-
     return True
 
 
