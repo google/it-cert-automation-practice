@@ -20,7 +20,7 @@ def validate_user(username, minlen):
         return False
     return True
 
-    #Username can't begin with forbiden character
+    #Username can't begin with forbiden character.
     if username[0] == "." | "_":
        return False
     return True
