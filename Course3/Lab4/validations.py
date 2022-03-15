@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python3
 
 import re
@@ -16,6 +17,7 @@ def validate_user(username, minlen):
     if not re.match('^[a-z0-9._]*$', username):
         return False
     # Usernames can't begin with a number
+<<<<<<< HEAD
     if username[0].isalpha():
         return True
     return False
@@ -23,6 +25,18 @@ print(validate_user("blue.kale", 3)) # True
 print(validate_user(".blue.kale", 3)) # Currently True, should be False
 print(validate_user("red_quinoa", 4)) # True
 print(validate_user("_red_quinoa", 4)) # Currently True, should be False
+=======
+    if username[0].isnumeric():
+        return False
+>>>>>>> 1a18bc2201e18bd737c751069f462f419445c1fc
 
+   # special_characters = ""!@#$%^&*()-+?_=,<>/""
 
+    if username[0].isalpha() == False:
+        return False 
+    return True
+print(validate_user("blue.kale", 3)) # True
+print(validate_user(".blue.kale", 3)) # Currently True, should be False
+print(validate_user("red_quinoa", 4)) # True
+print(validate_user("_red_quinoa", 4)) # Currently True, should be False
 
