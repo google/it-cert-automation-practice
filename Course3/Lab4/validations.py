@@ -1,4 +1,4 @@
-O#!/usr/bin/env python3
+#!/usr/bin/env python3
 
 import re
 
@@ -16,11 +16,8 @@ def validate_user(username, minlen):
     if not re.match('^[a-z0-9._]*$', username):
         return False
     # Usernames can't begin with a number
-    if username[0].isnumeric():
+    if not username[0].isalpha():
         return False
-    # First letter is alphabet
-    if (username[0].isalpha()==False):
-	return False
     return True
 
 
