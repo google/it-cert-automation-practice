@@ -19,7 +19,7 @@ def validate_user(username, minlen):
     if username[0].isnumeric() or username[0] == '_' or username[0] == '.':
         return False
     return True
-print("2ß22-04-24")"
+
 print(validate_user("blue.kale", 3)) # True
 print(validate_user(".blue.kale", 3)) # Currently True, should be False
 print(validate_user("red_quinoa", 4)) # True
