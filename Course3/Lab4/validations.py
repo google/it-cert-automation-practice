@@ -18,7 +18,7 @@ def validate_user(username, minlen):
     # Usernames can't begin with a number
     if username[0].isnumeric():
         return False
-    # Usernames can't begin with . or _
+    # New piece of code: Usernames can't begin with . or _
     if username[0] in ['.','_']:
         return False
     return True
