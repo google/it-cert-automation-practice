@@ -2,7 +2,7 @@
 #!/usr/bin/env python3
 
 import re
-
+import string
 def validate_user(username, minlen):
     """Checks if the received username matches the required conditions."""
     if type(username) != str:
@@ -17,7 +17,7 @@ def validate_user(username, minlen):
     if not re.match('^[a-z0-9._]*$', username):
         return False
     # Usernames can't begin with a number
-    if username[0].isnumeric() or username[0] in ('.', '_'):
+    if username[0].isnumeric() or username[0] in string.punctuation:
         return False
     return True
 
