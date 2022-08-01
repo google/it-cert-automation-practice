@@ -19,9 +19,8 @@ def validate_user(username, minlen):
     if username[0].isnumeric():
         return False
     # Usernames can't begin with special characters
-    if username[0] == ".":
-        return False
-    if username[0] == "_":
+    match = re.search(r"[\W_]", username[0])
+    if (match):
         return False
     return True
 
