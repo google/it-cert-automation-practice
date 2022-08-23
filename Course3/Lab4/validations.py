@@ -20,6 +20,7 @@ def validate_user(username, minlen):
         return False
     if username[0] == "_" or username[0] == ".":
         return False
+
     return True
 
 
