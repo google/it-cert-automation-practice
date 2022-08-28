@@ -20,6 +20,7 @@ def validate_user(username, minlen):
     if username[0].isnumeric():
         return False
     if re.match('^[._&$%#@!^()~`+=:;]*$',username[0]):
+#To prevent the usernmae from beginning with a special character
         return False
     return True
 
