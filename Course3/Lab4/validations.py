@@ -12,7 +12,6 @@ def validate_user(username, minlen):
 
     if not re.match('^[a-zA-Z]*$', username[0]):
         return False
-
     # Usernames can't be shorter than minlen
     if len(username) < minlen:
         return False
