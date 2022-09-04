@@ -2,7 +2,7 @@
 
 import re
 
-def check_first_character(character):
+def is_letter(character):
   if re.search('[A-Za-z]', character):
     return True
   return False
@@ -24,7 +24,7 @@ def validate_user(username, minlen):
     if username[0].isnumeric():
         return False
     # Usernames must being with a letter
-    if not check_first_character(username[0]):
+    if not is_letter(username[0]):
         return False
     return True
 
