@@ -2,6 +2,7 @@
 
 import re
 
+#this script checks if name is correct
 def validate_user(username, minlen):
     """Checks if the received username matches the required conditions."""
     if type(username) != str:
