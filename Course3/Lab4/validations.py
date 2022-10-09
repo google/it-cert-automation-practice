@@ -2,16 +2,39 @@
 
 import re
 
+
 def validate_user(username, minlen):
     """Checks if the received username matches the required conditions."""
+
+    # Pattern for the regex for re.match condition
+    # Username can only start with a letter
+    # Assumes that the username should
+    # ^ = start with
+    # a-z = small case letters
+    # A-Z = or capital letter
+    # .*$ = after that, anything can go with what and the user name will end
+    # Fixes #1 #Fixes Issues #1 of Git
+    pattern_first_letter = '^[a-zA-Z].*$'
+
     if type(username) != str:
         raise TypeError("username must be a string")
     if minlen < 1:
         raise ValueError("minlen must be at least 1")
-    
+    if not re.match(pattern_first_letter, username):
+        raise ValueError("username must start with a letter")
+
     # Usernames can't be shorter than minlen
     if len(username) < minlen:
         return False
+    # Username can only start with a letter
+    if not re.match(pattern_first_letter, username):
+        return False
+    # Using cases that have been tested and work fine.
+    # print(validate_user("blue.kale", 3)) # True
+    # print(validate_user(".blue.kale", 3)) # Was True, now is False
+    # print(validate_user("red_quinoa", 4)) # True
+    # print(validate_user("_red_quinoa", 4)) # Was True, now is False
+
     # Usernames can only use letters, numbers, dots and underscores
     if not re.match('^[a-z0-9._]*$', username):
         return False
@@ -19,6 +42,3 @@ def validate_user(username, minlen):
     if username[0].isnumeric():
         return False
     return True
-
-
-
