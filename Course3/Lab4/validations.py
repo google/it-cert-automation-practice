@@ -10,6 +10,8 @@ def validate_user(username, minlen):
         raise ValueError("minlen must be at least 1")
  
 
+
+
     # Usernames can't be shorter than minlen
     if len(username) < minlen:
         return False
