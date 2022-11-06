@@ -9,7 +9,7 @@ def validate_user(username, minlen):
     if minlen < 1:
         raise ValueError("minlen must be at least 1")
 
-    # Usernames must start with letter
+    # Usernames must start with aplha letter
     if not username[0].isalpha():
         return False
 
