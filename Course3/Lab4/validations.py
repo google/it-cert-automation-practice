@@ -21,7 +21,7 @@ def validate_user(username, minlen):
     # Usernames can't begin with  punctuations
     if username[0] == ".":
         return False
-# Usernames can't begin with  punctuations
+    # Usernames can't begin with  punctuations
     if username[0] == "_":
         return False
 
