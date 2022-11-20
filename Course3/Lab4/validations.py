@@ -20,5 +20,11 @@ def validate_user(username, minlen):
         return False
     return True
 
+print(validate_user("minlen", 3)) # True
+print(validate_user(".blue.kale", 3)) # Currently True, should be False
+print(validate_user("red_quinoa", 4)) # True
+print(validate_user("minlena", 4)) # Currently True, should be False
 
-
+Closes: #1
+Updated validations.py python script.
+Fixed the behavior of validate_user function in validations.py.
