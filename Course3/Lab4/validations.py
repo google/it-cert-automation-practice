@@ -23,6 +23,7 @@ def validate_user(username, minlen):
     else: 
         return False
 
+
     return True
 
 
