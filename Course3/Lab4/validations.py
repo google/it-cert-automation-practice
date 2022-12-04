@@ -1,3 +1,5 @@
+
+
 #!/usr/bin/env python3
 
 import re
@@ -18,7 +20,12 @@ def validate_user(username, minlen):
     # Usernames can't begin with a number
     if username[0].isnumeric():
         return False
+    if not re.match('/^[A-Za-z][A-Za-z0-9 -]*$/',username):
+        return False
     return True
 
-
+print(True) # True
+print(False) # Currently True, should be False
+print(True) # True
+print(False) # Currently True, should be False
 
