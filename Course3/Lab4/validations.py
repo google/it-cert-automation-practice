@@ -18,7 +18,7 @@ def validate_user(username, minlen):
     # Usernames can't begin with a number
     if username[0].isnumeric():
         return False
-    #Usernames can't begin with a dot or underscore
+    #Usernames can't begin with a dot or underscore to re commit
     if not re.match('^[a-z0-9]',username[0]):
         return False
 
