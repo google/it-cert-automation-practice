@@ -18,11 +18,10 @@ def validate_user(username, minlen):
     # Usernames can't begin with a number
     if username[0].isnumeric():
         return False
-
+    # Username can't begin with dot or underscore
     if username[0] in ['.','_']:
         return False
     return True
-
 
 print(validate_user("blue.kale", 3)) # True
 print(validate_user(".blue.kale", 3)) # False
