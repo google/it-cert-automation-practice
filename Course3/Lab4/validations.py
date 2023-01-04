@@ -18,7 +18,14 @@ def validate_user(username, minlen):
     # Usernames can't begin with a number
     if username[0].isnumeric():
         return False
+    # Usernames can't begin with exclamation mark or question mark
+    if username[0] in ['!', '?']:
+        return False
     return True
 
+print(validate_user('min_khant', 3))
+print(validate_user('6min.khant', 4))
+print(validate_user('min_khant5', 4))
+print(validate_user('?min_khant', 4))
 
 
