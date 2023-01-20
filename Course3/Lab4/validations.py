@@ -1,4 +1,4 @@
-#/usr/bin/env python3
+#!/usr/bin/env python3
 
 import re
 
@@ -24,7 +24,6 @@ def validate_user(username, minlen):
     # Usernames can't begin with an underscore
     if username[0] == "_":
         return False
-
 
 print(validate_user("blue.kale", 3)) # True
 print(validate_user(".blue.kale", 3)) # Currently True, should be False
