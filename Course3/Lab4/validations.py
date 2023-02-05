@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Author: Alex Alferovs
 
 import re
 
