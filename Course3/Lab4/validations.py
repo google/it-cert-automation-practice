@@ -24,7 +24,7 @@ def validate_user(username, minlen):
 
     if username[0]=="_":
     	return False
-    return true
+    return True
 
 print(validate_user("blue.kale", 3)) # True
 print(validate_user(".blue.kale", 3)) # Currently True, should be False
