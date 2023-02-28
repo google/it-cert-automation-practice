@@ -4,6 +4,12 @@ import re
 
 def validate_user(username, minlen):
     """Checks if the received username matches the required conditions."""
+
+    # Username should begin with a letter
+    if username[0].isalpha():
+        return True
+    return False
+
     if type(username) != str:
         raise TypeError("username must be a string")
     if minlen < 1:
@@ -19,6 +25,4 @@ def validate_user(username, minlen):
     if username[0].isnumeric():
         return False
     return True
-
-
-
+    
