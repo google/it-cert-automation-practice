@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 
-# comment here
-
 import re
 
 def validate_user(username, minlen):
