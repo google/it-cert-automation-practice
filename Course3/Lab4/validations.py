@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 #programa hecho por adrian
 import re
-
+#adrian hernandez
 def validate_user(username, minlen):
     """Checks if the received username matches the required conditions."""
     if type(username) != str:
