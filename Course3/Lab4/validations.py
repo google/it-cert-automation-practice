@@ -19,8 +19,6 @@ def validate_user(username, minlen):
     if username[0].isnumeric():
         return False
     # Username can't begin with a spec character
-    #pattern = r'''!"#$%&'()*+,-./:;<=>?@[]^_`{|}~'''
-    #if re.match(pattern,username):
     if not username[0].isalnum():
         return False
     return True
