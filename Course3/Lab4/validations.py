@@ -19,7 +19,7 @@ def validate_user(username, minlen):
     if username[0].isnumeric():
         return False
     #return True
-    # Username need to start with a capital; Letter
+    # Username need to start with a Letter
     if  not username[0].isalpha():
         return False
     return True
