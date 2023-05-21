@@ -3,11 +3,17 @@
 import re
 
 def validate_user(username, minlen):
+    if re.match("^[a-zA-Z]", username):
+     return True
+     print("true")
+    else: 
+     return False
+     print("false")
     """Checks if the received username matches the required conditions."""
     if type(username) != str:
         raise TypeError("username must be a string")
     if minlen < 1:
-        raise ValueError("minlen must be at least 1")
+       	raise ValueError("minlen must be at least 1")
     
     # Usernames can't be shorter than minlen
     if len(username) < minlen:
@@ -20,5 +26,8 @@ def validate_user(username, minlen):
         return False
     return True
 
-
+print(validate_user("blue.kale", 3)) # True
+print(validate_user(".blue.kale", 3)) # Currently True, should be False
+print(validate_user("red_quinoa", 4)) # True
+print(validate_user("_red_quinoa", 4)) # Currently True, should be False
 
