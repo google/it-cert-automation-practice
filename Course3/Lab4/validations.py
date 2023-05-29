@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-
-
+# maza aa rha hai bsdk
 import re
 
 def validate_user(username, minlen):
