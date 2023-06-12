@@ -2,6 +2,18 @@
 
 import re
 
+def check_username(username):
+    forbidden_characters = ['!', '@', '#', '_', '.', '$', '%']  # Add any other forbidden characters here
+
+    first_letter = username[0]
+    if re.match(r'[A-Za-z]', first_letter):
+        return False
+    elif first_letter in forbidden_characters:
+        return True
+    else:
+        print("Invalid username")
+
+
 def validate_user(username, minlen):
     """Checks if the received username matches the required conditions."""
     if type(username) != str:
@@ -16,9 +28,11 @@ def validate_user(username, minlen):
     if not re.match('^[a-z0-9._]*$', username):
         return False
     # Usernames can't begin with a number
-    if username[0].isnumeric():
+    if check_username(username):
         return False
     return True
 
-
-
+print(validate_user("blue.kale", 3)) # True
+print(validate_user(".blue.kale", 3)) # Currently True, should be False
+print(validate_user("red_quinoa", 4)) # True
+print(validate_user("_red_quinoa", 4)) # Currently True, should be False
