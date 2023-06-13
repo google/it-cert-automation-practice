@@ -20,5 +20,8 @@ def validate_user(username, minlen):
         return False
     return True
 
-
+print(validate_user("blue.kale", 3)) # True
+print(validate_user("2.blue.kale", 3)) # Currently True
+print(validate_user("re_quinoa",4)) #True
+print(validate_user("5_red_quinoa",4)) #Currently
 
