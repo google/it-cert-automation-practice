@@ -21,7 +21,6 @@ def validate_user(username, minlen):
     # Usernames can't begin with a special symbol
     if not re.match('^[^._]', username):
         return False
-
     return True
 
 print(validate_user("blue.kale", 3)) # True
