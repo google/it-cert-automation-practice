@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
-
 import re
 
-def validate_user(username, min_length):
-    if len(username) < min_length:
+def validate_user(username, minlen):
+    if type(username) != str:
+        raise TypeError("username must be a string")
+    if minlen < 1:
+        raise ValueError("minlen must be at least 1")
+    if len(username) < minlen:
         return False
-    if username[0] in ['.', '_']:
+    if not re.match('^[a-z0-9._]*$', username):
         return False
-    if not all(char.islower() or char == '.' for char in username):
+    if username[0].isnumeric():
         return False
     # Check if the username has consecutive dots ('..')
     if '..' in username:
