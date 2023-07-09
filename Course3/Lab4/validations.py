@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 import re
 
 def validate_user(username, minlen):
@@ -19,6 +18,23 @@ def validate_user(username, minlen):
     if username[0].isnumeric():
         return False
     return True
+def validate_user(username, min_length):
+    if not username:
+        return False
+    if len(username) < min_length:
+        return False
+    if not username[0].isalpha() or username[0] in ['.', '_']:
+        return False
+    if not username[1:].isalnum():
+        return False
+    return True
+
+print(validate_user("blue.kale", 3))  # True
+print(validate_user(".blue.kale", 3))  # False
+print(validate_user("red_quinoa", 4))  # True
+print(validate_user("_red_quinoa", 4))  # False
+
+
 
 
 
