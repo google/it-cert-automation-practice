@@ -1,3 +1,9 @@
+print(validate_user("pavandev-patel", 3)) # True
+print(validate_user("pavandev-patel", 3)) # Currently True, should be False
+print(validate_user("pavandev-patel", 4)) # True
+print(validate_user("pavandev-patel", 4)) # Currently True, should be False
+
+
 #!/usr/bin/env python3
 
 import re
