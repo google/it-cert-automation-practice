@@ -26,3 +26,4 @@ print(validate_user("red_quinoa", 4)) # True
 print(validate_user("_red_quinoa", 4)) # Currently True, should be False
 print(validate_user("2pac_king", 3))
 print(validate_user("2chains_", 3))
+print(validate_user("soteria7", 2))
