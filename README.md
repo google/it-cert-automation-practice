@@ -5,3 +5,4 @@ part of the Google IT Automation with Python Professional Certificate
 
 There's a separate folder for each course.
 
+20230813 - Updated validations.py in Course3Lab4
