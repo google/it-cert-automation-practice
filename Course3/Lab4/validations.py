@@ -16,6 +16,7 @@ def validate_user(username, minlen):
     if not re.match('^[a-z0-9]*[a-z0-9_.]*$', username):
         return False
     if "." == username[0]:
+        print()
         return False
     if "_" == username[0]:
         return False
