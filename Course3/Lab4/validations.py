@@ -20,7 +20,7 @@ def validate_user(username, minlen):
         return False
     return True
     # Usernames can't begin with forbidden characters
-    if not username[0].isalpha():
+    if re.match('^[._]', username):
         return False
     return True
 
