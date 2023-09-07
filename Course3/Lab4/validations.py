@@ -1,5 +1,5 @@
 import re
-
+# nothing to add more i just forget to close the issue sry
 def validate_user(username, minlen):
     """Checks if the received username matches the required conditions."""
     if type(username) != str:
