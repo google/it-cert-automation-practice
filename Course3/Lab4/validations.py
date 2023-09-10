@@ -2,7 +2,7 @@
 
 import re
 
-#This is a comment
+#This is a commen, because I am not able to follow simple instructions.
 def validate_user(username, minlen):
     """Checks if the received username matches the required conditions."""
     if type(username) != str:
