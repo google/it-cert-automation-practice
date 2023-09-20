@@ -19,6 +19,7 @@ def validate_user(username, minlen):
     if username[0].isnumeric():
         return False
     return True
+#adding just a further edit as it is not working
 
 print(validate_user("blue.kale", 3)) # True
 print(validate_user(".blue.kale", 3)) # Currently True, should be False
