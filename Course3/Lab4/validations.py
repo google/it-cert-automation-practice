@@ -21,9 +21,13 @@ def validate_user(username, minlen):
     #Usernames can't start with . or _
     if username[0] == "_" or username[0] == ".":
         return False
+    #Username can't contain the word Fuck
+    if re.search("fuck", username):
+        return False
     return True
 
-
+print(validate_user("fuckyou", 4)) #Should not pass, False
+print(validate_user("fuyouck", 4)) #pass, True
 print(validate_user("blue.kale", 3)) # True
 print(validate_user(".blue.kale", 3)) # Currently True, should be False
 print(validate_user("red_quinoa", 4)) # True
