@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Google IT Automation with Pythong - Git and GitHub, Qwiklabs Assessment Module Final
+# Google IT Automation with Python - Git and GitHub, Qwiklabs Assessment Module Final
 
 import re
 
