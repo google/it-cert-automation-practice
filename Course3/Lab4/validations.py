@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+# Google IT Automation with Pythong - Git and GitHub, Qwiklabs Assessment Module Final
+
 import re
 
 def validate_user(username, minlen):
@@ -18,7 +20,14 @@ def validate_user(username, minlen):
     # Usernames can't begin with a number
     if username[0].isnumeric():
         return False
+    # Usernames must begin with a letter, this will verify that the username starts with a letter
+    if not username[0].isalpha():
+        return False
     return True
 
 
+print(validate_user("blue.kale", 3)) # True
+print(validate_user(".blue.kale", 3)) # Currently True, should be False
+print(validate_user("red_quinoa", 4)) # True
+print(validate_user("_red_quinoa", 4)) # Currently True, should be False
 
