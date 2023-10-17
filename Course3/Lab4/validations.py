@@ -20,7 +20,7 @@ def validate_user(username, minlen):
         return False
 
 
-    # Usernames can't begin with a dot or an underscore
+    # Usernames can't begin with a dot . or an underscore _
     if username[0] in ['.', '_']:
         return False
     return True
