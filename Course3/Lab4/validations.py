@@ -18,6 +18,8 @@ def validate_user(username, minlen):
         return False
     return True
 
+
+# changed for testing how to open a new pull
 print(validate_user("blue.kale", 3)) # True
 print(validate_user(".blue.kale", 3)) # Currently True, should be False
 print(validate_user("red_quinoa", 4)) # True
