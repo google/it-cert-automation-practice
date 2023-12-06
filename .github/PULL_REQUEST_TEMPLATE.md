@@ -4,3 +4,7 @@ Fixes #<issue_number_goes_here>
 
 - [ ] Tests pass
 - [ ] Appropriate changes to README are included in PR
+
+Closes: #1
+Updated validations.py python script.
+Fixed the behavior of validate_user function in validations.py.
