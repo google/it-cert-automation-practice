@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import re
+import string
 
 def validate_user(username, minlen):
     """Checks if the received username matches the required conditions."""
@@ -18,7 +19,8 @@ def validate_user(username, minlen):
     # Usernames can't begin with a number
     if username[0].isnumeric():
         return False
-    if username[0] in "!@#$%^&*()_+-=[]}{'<>?,./\\\'\"":
+    # Usernames can't begin with a symbol
+    if username[0] in string.punctuation:
         return False
     return True
 
