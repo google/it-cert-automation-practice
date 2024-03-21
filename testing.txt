@@ -1,0 +1,21 @@
+To create a pull request from your forked repository to the original repository from which you forked, follow these steps:
+
+Navigate to Your Forked Repository: Go to your forked repository's page on GitHub.
+
+Switch to the Feature Branch: Make sure you are on the branch that contains the changes you want to merge into the original repository. You can select the branch from the branch dropdown menu or by navigating to the "Branches" tab and selecting the desired branch.
+
+Initiate Pull Request: Once you are on the correct branch, GitHub will typically display a message indicating that you can "Compare & pull request". Click on this button to initiate the pull request.
+
+Review Changes: On the pull request creation page, you'll see a summary of the changes included in your pull request. Review the changes to ensure they are correct and complete.
+
+Provide Title and Description: Enter a title and description for your pull request. The title should be descriptive and concise, summarizing the purpose of the pull request. The description can provide additional context or details about the changes.
+
+Assign Reviewers (Optional): If you want specific individuals to review your changes before they are merged, you can assign reviewers to the pull request by selecting them from the "Reviewers" section.
+
+Review Changes (Optional): Before submitting the pull request, you can review the changes one last time by clicking on the "Files changed" tab. This allows you to ensure that all changes are correct and as expected.
+
+Create Pull Request: Once you are satisfied with the changes and the pull request details, click on the "Create pull request" button. This will create the pull request and notify the maintainers of the original repository.
+
+Monitor and Respond to Feedback: After creating the pull request, you can monitor its status and any feedback or comments provided by the maintainers. You may need to address any review comments or requests for changes before the pull request can be merged.
+
+That's it! You've successfully created a pull request from your forked repository to the original repository. The maintainers of the original repository will review your changes and decide whether to merge them into the main branch.
