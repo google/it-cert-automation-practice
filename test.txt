@@ -1,0 +1,8 @@
+In today’s world of rapid technological change, the challenges organizations face—to support employees and partners, reach new customers, and provide innovative products and services—are more complex than ever before. IT plays a crucial role in meeting these demands, but also acts as a blocker if it isn’t scalable and can’t keep up with demand.
+
+As enterprises scale, so does the difficulty of deploying and maintaining environments that are stable, more secure, and consistent. To break it down further:
+
+IT operations are resource-intensive—and maintaining legacy systems and processes at the same time as new ones only increases complexity.
+Requirements and demand are outgrowing IT and business capabilities.
+The scale of technology (virtualization, cloud, containers, etc.) is too great to do manually.
+In this constantly shifting environment, automation has become a strategic imperative. Automation is critical to managing, changing, and adapting your IT infrastructure and the way your enterprise operates. IT teams can automate complex processes to increase efficiency, productivity, and flexibility—while also reducing costs and human error.
