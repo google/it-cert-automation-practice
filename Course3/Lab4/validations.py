@@ -22,3 +22,18 @@ def validate_user(username, minlen):
 
 
 
+def validate_username(username):
+
+    if not username:
+
+        return False
+
+    # Check if the username starts with an allowed character
+
+    if username[0].isalpha():
+
+        return True
+
+    return False
+
+
