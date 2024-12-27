@@ -5,3 +5,5 @@ part of the Google IT Automation with Python Professional Certificate
 
 There's a separate folder for each course.
 
+Se ha modificado el script validation.py para mejorar los nombres posibles
+
