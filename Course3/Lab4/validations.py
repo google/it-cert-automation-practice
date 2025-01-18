@@ -22,7 +22,6 @@ def validate_user(username, minlen):
     # Username must start with an alphabet
     if not re.match(r"^[a-zA-Z]", username):
         return False
-
     return True
 
 print(validate_user("blue.kale", 3)) # True
