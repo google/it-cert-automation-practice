@@ -2,6 +2,8 @@
 
 import re
 
+special_characters = '^._*$'
+
 def validate_user(username, minlen):
     """Checks if the received username matches the required conditions."""
     if type(username) != str:
@@ -15,10 +17,14 @@ def validate_user(username, minlen):
     # Usernames can only use letters, numbers, dots and underscores
     if not re.match('^[a-z0-9._]*$', username):
         return False
-    # Usernames can't begin with a number
-    if username[0].isnumeric():
+    # Usernames can't begin with a number or can't chart with any of the special characters
+    if username[0].isnumeric() or any(c in special_characters for c in username[0]):
         return False
     return True
+print(validate_user("blue.kale", 3)) # True
 
+print(validate_user(".blue.kale", 3)) # Currently True, should be False
 
+print(validate_user("red_quinoa", 4)) # True
 
+print(validate_user("_red_quinoa", 4)) # Currently True, should be False
