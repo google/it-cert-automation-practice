@@ -19,7 +19,9 @@ def validate_user(username, minlen):
     if username[0].isnumeric():
         return False
     patron = r'^[a-zA-Z]'
+
     # Verificar si el username coincide con el patrón
+    # incidente
     if re.match(patron, username):
         return True
     else:
