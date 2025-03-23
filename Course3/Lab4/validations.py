@@ -19,8 +19,8 @@ def validate_user(username, minlen):
     if username[0].isnumeric():
         return False
 
-    # Usernames can't begin with dots and underscores
-    if username[0] =='.' or username[0] =='_' :
+    # Usernames can't begin with both  dots and underscores
+    if username[0] == '.' or username[0] == '_' :
         return False
     return True
 
