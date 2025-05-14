@@ -1,24 +1,34 @@
-#!/usr/bin/env python3
-
-import re
-
 def validate_user(username, minlen):
     """Checks if the received username matches the required conditions."""
-    if type(username) != str:
-        raise TypeError("username must be a string")
+    if not isinstance(username, str):
+        return "Error: Username must be a string."
     if minlen < 1:
-        raise ValueError("minlen must be at least 1")
-    
-    # Usernames can't be shorter than minlen
+        return "Error: Minimum length must be at least 1."
+
+    # Ensure case insensitivity by transforming username to lowercase
+    username = username.lower()
+
+    # Check the minimum length of the username
     if len(username) < minlen:
-        return False
-    # Usernames can only use letters, numbers, dots and underscores
-    if not re.match('^[a-z0-9._]*$', username):
-        return False
-    # Usernames can't begin with a number
-    if username[0].isnumeric():
-        return False
+        return f"Error: Username must be at least {minlen} characters long."
+
+    # Check for invalid characters
+    for char in username:
+        if not (char.isalnum() or char in "._"):
+            return "Error: Username can only contain letters, numbers, dots, and underscores."
+
+    # Ensure the username does not begin with a number
+    if username[0].isdigit():
+        return "Error: Username cannot begin with a number."
+
+    # Disallow reserved words
+    reserved_words = {"admin", "root", "user", "test"}
+    if username in reserved_words:
+        return f"Error: Username cannot be a reserved word (e.g., {', '.join(reserved_words)})."
+
+    # Ensure no consecutive dots
+    if ".." in username:
+        return "Error: Username cannot contain consecutive dots."
+
+    # If all checks pass, return True
     return True
-
-
-
