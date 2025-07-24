@@ -18,7 +18,15 @@ def validate_user(username, minlen):
     # Usernames can't begin with a number
     if username[0].isnumeric():
         return False
-    return True
+   
 
+    # Username con't start with dots and underscores
+    if username.startswith('.') or username.startswith('_'):
+        return False
+    return True # If all checks pass, username is valid 
 
+print(validate_user("blue.kale", 3)) # True
+print(validate_user(".blue.kale", 3)) # currently true, should be false
+print(validate_user("red_quinoa", 4)) # True
+print(validate_user("_red_quinoa", 4)) # Vurrently true , should be false
 
